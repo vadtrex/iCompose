@@ -276,6 +276,247 @@ function MainScreen({ navigation }) {
         >
           Ostatnio wrzucone
         </Text>
+        <View style={{ flexDirection: "row", alignSelf: "center" }}>
+          <TouchableOpacity
+            style={{
+              marginTop: 12,
+              width: 90,
+              height: 126,
+              backgroundColor: "#F2F2F2",
+              borderRadius: 16,
+              marginLeft: 12,
+            }}
+          >
+            <View
+              style={{
+                marginTop: 12,
+                flexDirection: "row",
+                marginLeft: 4,
+              }}
+            >
+              <Image
+                source={require("../assets/clock.png")}
+                style={{ width: 32, height: 32 }}
+              />
+              <Text
+                style={{
+                  marginLeft: 2,
+                  alignSelf: "center",
+                  fontWeight: "bold",
+                  fontSize: 16,
+                  color: "#464E47",
+                }}
+              >
+                14:30
+              </Text>
+            </View>
+            <View
+              style={{
+                marginTop: 4,
+                flexDirection: "row",
+                marginLeft: 4,
+              }}
+            >
+              <Image
+                source={require("../assets/weight.png")}
+                style={{ width: 32, height: 32 }}
+              />
+              <Text
+                style={{
+                  marginLeft: 2,
+                  alignSelf: "center",
+                  fontWeight: "bold",
+                  fontSize: 16,
+                  color: "#464E47",
+                }}
+              >
+                0,5kg
+              </Text>
+            </View>
+            <View
+              style={{
+                marginTop: 4,
+                width: 64,
+                height: 32,
+                borderRadius: 32,
+                marginTop: 6,
+                alignSelf: "center",
+                justifyContent: "center",
+              }}
+            >
+              <Text
+                style={{
+                  alignSelf: "center",
+                  fontWeight: "bold",
+                  fontSize: 12,
+                  color: "#464E47",
+                }}
+              >
+                Do dodania
+              </Text>
+            </View>
+          </TouchableOpacity>
+          <View
+            style={{
+              marginTop: 12,
+              width: 90,
+              height: 126,
+              backgroundColor: "#F2F2F2",
+              borderRadius: 16,
+              marginLeft: 12,
+            }}
+          >
+            <View
+              style={{
+                marginTop: 12,
+                flexDirection: "row",
+                marginLeft: 4,
+              }}
+            >
+              <Image
+                source={require("../assets/clock.png")}
+                style={{ width: 32, height: 32 }}
+              />
+              <Text
+                style={{
+                  marginLeft: 2,
+                  alignSelf: "center",
+                  fontWeight: "bold",
+                  fontSize: 16,
+                  color: "#464E47",
+                }}
+              >
+                11:30
+              </Text>
+            </View>
+            <View
+              style={{
+                marginTop: 4,
+                flexDirection: "row",
+                marginLeft: 4,
+              }}
+            >
+              <Image
+                source={require("../assets/weight.png")}
+                style={{ width: 32, height: 32 }}
+              />
+              <Text
+                style={{
+                  marginLeft: 2,
+                  alignSelf: "center",
+                  fontWeight: "bold",
+                  fontSize: 16,
+                  color: "#464E47",
+                }}
+              >
+                1,5kg
+              </Text>
+            </View>
+            <View
+              style={{
+                marginTop: 4,
+                width: 64,
+                height: 32,
+                borderRadius: 32,
+                marginTop: 6,
+                alignSelf: "center",
+                justifyContent: "center",
+                backgroundColor: "#D6ECA3",
+              }}
+            >
+              <Text
+                style={{
+                  alignSelf: "center",
+                  fontWeight: "bold",
+                  fontSize: 12,
+                  color: "#464E47",
+                }}
+              >
+                Trawiaste
+              </Text>
+            </View>
+          </View>
+          <View
+            style={{
+              marginTop: 12,
+              width: 90,
+              height: 126,
+              backgroundColor: "#F2F2F2",
+              borderRadius: 16,
+              marginLeft: 12,
+            }}
+          >
+            <View
+              style={{
+                marginTop: 12,
+                flexDirection: "row",
+                marginLeft: 4,
+              }}
+            >
+              <Image
+                source={require("../assets/clock.png")}
+                style={{ width: 32, height: 32 }}
+              />
+              <Text
+                style={{
+                  marginLeft: 2,
+                  alignSelf: "center",
+                  fontWeight: "bold",
+                  fontSize: 16,
+                  color: "#464E47",
+                }}
+              >
+                8:30
+              </Text>
+            </View>
+            <View
+              style={{
+                marginTop: 4,
+                flexDirection: "row",
+                marginLeft: 4,
+              }}
+            >
+              <Image
+                source={require("../assets/weight.png")}
+                style={{ width: 32, height: 32 }}
+              />
+              <Text
+                style={{
+                  marginLeft: 2,
+                  alignSelf: "center",
+                  fontWeight: "bold",
+                  fontSize: 16,
+                  color: "#464E47",
+                }}
+              >
+                0,2kg
+              </Text>
+            </View>
+            <View
+              style={{
+                marginTop: 4,
+                width: 64,
+                height: 32,
+                borderRadius: 32,
+                marginTop: 6,
+                alignSelf: "center",
+                justifyContent: "center",
+                backgroundColor: "#FFDE9E",
+              }}
+            >
+              <Text
+                style={{
+                  alignSelf: "center",
+                  fontWeight: "bold",
+                  fontSize: 12,
+                  color: "#464E47",
+                }}
+              >
+                Warzywa
+              </Text>
+            </View>
+          </View>
+        </View>
       </View>
       <View
         style={{
