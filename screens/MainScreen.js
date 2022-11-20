@@ -10,21 +10,14 @@ import {
   StatusBar,
   Dimensions,
   Image,
+  Modal,
 } from "react-native";
 import Carousel from "pinar";
-import BottomSheet from "@gorhom/bottom-sheet";
-import { handleSheetChanges } from "@gorhom/bottom-sheet";
-import {
-  LineChart,
-  BarChart,
-  PieChart,
-  ProgressChart,
-  ContributionGraph,
-  StackedBarChart,
-} from "react-native-chart-kit";
+import { PieChart } from "react-native-chart-kit";
 
 function MainScreen({ navigation }) {
   const [isChartShown, setisChartShown] = useState(false);
+  const [modalVisible, setModalVisible] = useState(false);
 
   const chartConfig = {
     backgroundGradientFrom: "#1E2923",
@@ -32,9 +25,9 @@ function MainScreen({ navigation }) {
     backgroundGradientTo: "#08130D",
     backgroundGradientToOpacity: 0.5,
     color: (opacity = 1) => `rgba(26, 255, 146, ${opacity})`,
-    strokeWidth: 2, // optional, default 3
+    strokeWidth: 2,
     barPercentage: 0.5,
-    useShadowColorFromDataset: false, // optional
+    useShadowColorFromDataset: false,
   };
   const chartData = [
     {
@@ -76,6 +69,194 @@ function MainScreen({ navigation }) {
   const width = Dimensions.get("window").width;
   return (
     <ScrollView showsHorizontalScrollIndicator={false} style={styles.container}>
+      <View
+        style={{
+          flex: 1,
+          justifyContent: "center",
+          alignItems: "center",
+          marginTop: 22,
+        }}
+      >
+        <Modal
+          animationType="slide"
+          transparent={true}
+          visible={modalVisible}
+          onRequestClose={() => {
+            setModalVisible(!modalVisible);
+          }}
+        >
+          <View
+            style={{
+              alignSelf: "center",
+              marginTop: 256,
+              width: 0.8 * width,
+              height: 256,
+              backgroundColor: "white",
+              borderRadius: 16,
+            }}
+          >
+            <Text
+              style={{
+                fontWeight: "bold",
+                fontSize: 18,
+                color: "#29462C",
+                marginLeft: 24,
+                marginTop: 12,
+                alignSelf: "center",
+              }}
+            >
+              Wybierz rodzaj odpadów:
+            </Text>
+            <View style={{ flexDirection: "row", alignSelf: "center" }}>
+              <TouchableOpacity
+                onPress={() => setModalVisible(false)}
+                style={{
+                  width: 96,
+                  height: 48,
+                  borderRadius: 32,
+                  marginTop: 12,
+                  marginLeft: 12,
+                  justifyContent: "center",
+                  backgroundColor: "#FFDE9E",
+                }}
+              >
+                <Text
+                  style={{
+                    alignSelf: "center",
+                    fontWeight: "bold",
+                    fontSize: 18,
+                    color: "#464E47",
+                  }}
+                >
+                  Warzywa
+                </Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => setModalVisible(false)}
+                style={{
+                  width: 96,
+                  height: 48,
+                  borderRadius: 32,
+                  marginTop: 12,
+                  marginLeft: 12,
+                  justifyContent: "center",
+                  backgroundColor: "#E8BCBC",
+                }}
+              >
+                <Text
+                  style={{
+                    alignSelf: "center",
+                    fontWeight: "bold",
+                    fontSize: 18,
+                    color: "#464E47",
+                  }}
+                >
+                  Owoce
+                </Text>
+              </TouchableOpacity>
+            </View>
+            <View style={{ flexDirection: "row", alignSelf: "center" }}>
+              <TouchableOpacity
+                onPress={() => setModalVisible(false)}
+                style={{
+                  width: 96,
+                  height: 48,
+                  borderRadius: 32,
+                  marginTop: 12,
+                  marginLeft: 12,
+                  justifyContent: "center",
+                  backgroundColor: "#D6ECA3",
+                }}
+              >
+                <Text
+                  style={{
+                    alignSelf: "center",
+                    fontWeight: "bold",
+                    fontSize: 18,
+                    color: "#464E47",
+                  }}
+                >
+                  Trawiaste
+                </Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => setModalVisible(false)}
+                style={{
+                  width: 96,
+                  height: 48,
+                  borderRadius: 32,
+                  marginTop: 12,
+                  marginLeft: 12,
+                  justifyContent: "center",
+                  backgroundColor: "#F2E8CF",
+                }}
+              >
+                <Text
+                  style={{
+                    alignSelf: "center",
+                    fontWeight: "bold",
+                    fontSize: 18,
+                    color: "#464E47",
+                  }}
+                >
+                  Skorupki
+                </Text>
+              </TouchableOpacity>
+            </View>
+            <View style={{ flexDirection: "row", alignSelf: "center" }}>
+              <TouchableOpacity
+                onPress={() => setModalVisible(false)}
+                style={{
+                  width: 96,
+                  height: 48,
+                  borderRadius: 32,
+                  marginTop: 12,
+                  marginLeft: 12,
+                  justifyContent: "center",
+                  backgroundColor: "#C8CDFF",
+                }}
+              >
+                <Text
+                  style={{
+                    alignSelf: "center",
+                    fontWeight: "bold",
+                    fontSize: 18,
+                    color: "#464E47",
+                  }}
+                >
+                  Inne
+                </Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={{
+                  backgroundColor: "#47E23B",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  borderRadius: 32,
+                  width: 96,
+                  marginTop: 12,
+                  marginLeft: 12,
+                  justifyContent: "center",
+                  alignSelf: "center",
+                  height: 48,
+                }}
+                onPress={() => setModalVisible(false)}
+              >
+                <Text
+                  style={{
+                    fontSize: 15,
+                    color: "white",
+                    fontWeight: "bold",
+                    alignSelf: "center",
+                  }}
+                >
+                  Zamknij
+                </Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </Modal>
+      </View>
       <Text
         style={{
           fontWeight: "bold",
@@ -286,6 +467,7 @@ function MainScreen({ navigation }) {
               borderRadius: 16,
               marginLeft: 12,
             }}
+            onPress={() => setModalVisible(true)}
           >
             <View
               style={{
@@ -526,7 +708,6 @@ function MainScreen({ navigation }) {
           backgroundColor: "white",
           marginLeft: 16,
           marginRight: 16,
-          marginBottom: 56,
           width: width - 32,
         }}
       >
@@ -537,7 +718,6 @@ function MainScreen({ navigation }) {
             fontWeight: "bold",
             fontSize: 18,
             color: "#29462C",
-            marginBottom: 12,
           }}
         >
           Zasady kompostowania
@@ -561,7 +741,7 @@ function MainScreen({ navigation }) {
             />
             <View style={{ flex: 1 }}>
               <Text style={styles.title}>
-                Najlepszym materiałem na kompost są odpady zielone takie jak na
+                Najlepszym materiałem na kompost są odpady zielone, takie jak na
                 przykład liście, ścięta trawa lub cienkie gałęzie.
               </Text>
             </View>
@@ -593,6 +773,7 @@ function MainScreen({ navigation }) {
           </View>
         </Carousel>
       </View>
+      <View style={{ height: 20, width: 10, marginTop: 24 }} />
     </ScrollView>
   );
 }

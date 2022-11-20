@@ -22,7 +22,7 @@ export default [
     id: "4",
     title: "Dowiedz się wcześniej!",
     description:
-      "Zjedź na dół, aby zobaczyć kiedy twój organiczny nawóz będzie gotowy!",
+      "Zjedź na dół, aby zobaczyć kiedy Twój organiczny nawóz będzie gotowy!",
     image: require("../assets/Onboarding4.png"),
   },
   {
