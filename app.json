@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "iCompost",
+    "name": "iCompose",
     "slug": "iCompost",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -14,19 +14,17 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.vadtrex.iCompost"
+      "bundleIdentifier": "com.vadtrex.iCompose"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon-foreground.png",
         "backgroundImage": "./assets/adaptive-icon.png"
       },
-      "package": "com.vadtrex.iCompost"
+      "package": "com.vadtrex.iCompose"
     },
     "web": {
       "favicon": "./assets/favicon.png"
