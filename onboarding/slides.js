@@ -1,28 +1,32 @@
 export default [
   {
     id: "1",
-    title: "Witaj w aplikacji MEETin!",
-    description: "Spotkania ze znajomymi jeszcze nigdy nie były tak proste!",
-    image: require("../assets/welcome1.jpg"),
+    title: "Wyrzucasz BIO odpady? ",
+    description: "Podziel się z nami czym to było!",
+    image: require("../assets/Onboarding1.png"),
   },
   {
     id: "2",
-    title: "Personalizacja miejsc",
-    description:
-      "Odpowiedz na kilka krótkich pytań, na podstawie, których aplikacja znajdzie idealne miejsca dla ciebie.",
-    image: require("../assets/welcome2.jpg"),
+    title: "Obserwuj ilość zgromadzonego kompostu!",
+    description: "Tekst",
+    image: require("../assets/Onboarding2.png"),
   },
   {
     id: "3",
-    title: "Wybór miejsca",
-    description:
-      "Podczas wyboru miejsca z listy dowiesz się jak ocenia je społeczność oraz poznasz jego odległość od Ciebie.",
-    image: require("../assets/welcome3.jpg"),
+    title: "Obserwuj skład swojego kompostu!",
+    description: "Tekst",
+    image: require("../assets/Onboarding3.png"),
   },
   {
     id: "4",
-    title: "To już wszystko!",
-    description: "Ciesz się swoim idealnym spotkaniem ze znajomymi. ",
-    image: require("../assets/welcome4.jpg"),
+    title: "Zobacz kiedy Twój nawóz będzie gotowy!",
+    description: "Tekst",
+    image: require("../assets/Onboarding4.png"),
+  },
+  {
+    id: "5",
+    title: "Poznaj użyteczne porady dotyczące tworzenia kompostu!",
+    description: "Tekst",
+    image: require("../assets/Onboarding5.png"),
   },
 ];

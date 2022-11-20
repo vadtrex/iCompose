@@ -16,7 +16,7 @@ import Carousel from "pinar";
 function MainScreen({ navigation }) {
   const width = Dimensions.get("window").width;
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView showsHorizontalScrollIndicator={false} style={styles.container}>
       <Text
         style={{
           fontWeight: "bold",
@@ -207,6 +207,7 @@ function MainScreen({ navigation }) {
           backgroundColor: "white",
           marginLeft: 16,
           marginRight: 16,
+          marginBottom: 56,
           width: width - 32,
         }}
       >
@@ -217,6 +218,7 @@ function MainScreen({ navigation }) {
             fontWeight: "bold",
             fontSize: 18,
             color: "#29462C",
+            marginBottom: 12,
           }}
         >
           Zasady kompostowania
@@ -224,7 +226,7 @@ function MainScreen({ navigation }) {
         <Carousel
           showsControls={false}
           showsDots={false}
-          height={290}
+          height={180}
           autoplay={true}
           autoplayInterval={6000}
           loop={true}
@@ -238,11 +240,10 @@ function MainScreen({ navigation }) {
               fadeDuration={0}
               style={[styles.image, { width, resizeMode: "contain" }]}
             />
-            <View style={{ flex: 0.3 }}>
-              <Text style={styles.title}>Zasada 1</Text>
-              <Text style={styles.description}>
+            <View style={{ flex: 1 }}>
+              <Text style={styles.title}>
                 Najlepszym materiałem na kompost są odpady zielone takie jak na
-                przykład liście, ścięta trawa lub cienkie gałęzie
+                przykład liście, ścięta trawa lub cienkie gałęzie.
               </Text>
             </View>
           </View>
@@ -252,9 +253,11 @@ function MainScreen({ navigation }) {
               fadeDuration={0}
               style={[styles.image, { width, resizeMode: "contain" }]}
             />
-            <View style={{ flex: 0.3 }}>
-              <Text style={styles.title}>Zasada 3</Text>
-              <Text style={styles.description}>Opis zasady 3</Text>
+            <View style={{ flex: 1 }}>
+              <Text style={styles.title}>
+                Do kompostu warto zawsze dorzucić trochę skórek od warzyw, które
+                stanowią bardzo dobrą pożywkę dla pożytecznych bakterii.
+              </Text>
             </View>
           </View>
           <View style={styles.slide}>
@@ -263,6 +266,11 @@ function MainScreen({ navigation }) {
               fadeDuration={0}
               style={[styles.image, { width, resizeMode: "contain" }]}
             />
+            <View style={{ flex: 1 }}>
+              <Text style={styles.title}>
+                Kompost na koniec zawsze warto zakryć pewną warstwą ziemi.
+              </Text>
+            </View>
           </View>
         </Carousel>
       </View>
@@ -343,9 +351,11 @@ const styles = StyleSheet.create({
   },
   title: {
     fontWeight: "bold",
-    fontSize: 22,
+    marginTop: 12,
+    maxWidth: 300,
+    fontSize: 18,
     marginBottom: 10,
-    color: "#2E3E5C",
+    color: "#29462C",
     textAlign: "center",
   },
   description: {
