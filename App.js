@@ -7,8 +7,9 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 //End of navigation stack configuration
 
 //Screen import section
-import OnboardingScreen from "./screens/OnboardingScreen";
 import WelcomeScreen from "./screens/WelcomeScreen";
+import OnboardingScreen from "./screens/OnboardingScreen";
+import MainScreen from "./screens/MainScreen";
 //End of screen import section
 
 const Stack = createNativeStackNavigator();
@@ -23,6 +24,7 @@ export default function App({ navigation }) {
       >
         <Stack.Screen name="Welcome" component={WelcomeScreen} />
         <Stack.Screen name="Onboarding" component={OnboardingScreen} />
+        <Stack.Screen name="Main" component={MainScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
