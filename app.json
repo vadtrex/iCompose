@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "composter",
-    "slug": "composter",
+    "name": "iCompost",
+    "slug": "iCompost",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -22,12 +22,18 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
+        "foregroundImage": "./assets/adaptive-icon-foreground.png",
+        "backgroundImage": "./assets/adaptive-icon.png"
+      },
+      "package": "com.vadtrex.iCompost"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "2b7d145e-83eb-4478-9982-fa4fc83c2c5c"
+      }
     }
   }
 }

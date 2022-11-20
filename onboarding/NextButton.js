@@ -57,7 +57,7 @@ export default NextButton = ({ percentage, scrollTo }) => {
           />
           <Circle
             ref={progressRef}
-            stroke="#2BA84A"
+            stroke="#47E23B"
             cx={center}
             cy={center}
             r={radius}
@@ -71,7 +71,7 @@ export default NextButton = ({ percentage, scrollTo }) => {
         style={styles.button}
         activeOpacity={0.6}
       >
-        <AntDesign name="arrowright" size={24} color="black" />
+        <AntDesign name="arrowright" size={24} color="white" />
       </TouchableOpacity>
     </View>
   );
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
   },
   button: {
     position: "absolute",
-    backgroundColor: "#2BA84A",
+    backgroundColor: "#47E23B",
     borderRadius: 100,
     padding: 20,
   },

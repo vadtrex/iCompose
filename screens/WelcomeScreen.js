@@ -20,7 +20,7 @@ function WelcomeScreen({ navigation }) {
         <Carousel
           showsControls={false}
           showsDots={false}
-          height={290}
+          height={330}
           autoplay={true}
           loop={true}
           autoplayInterval={6000}
@@ -32,37 +32,37 @@ function WelcomeScreen({ navigation }) {
           <View style={styles.slide}>
             <Image
               style={styles.image}
-              source={require("../assets/welcome1.jpg")}
+              source={require("../assets/Onboarding1.png")}
             />
           </View>
           <View style={styles.slide}>
             <Image
               style={styles.image}
-              source={require("../assets/welcome2.jpg")}
+              source={require("../assets/Onboarding2.png")}
             />
           </View>
           <View style={styles.slide}>
             <Image
               style={styles.image}
-              source={require("../assets/welcome3.jpg")}
+              source={require("../assets/Onboarding3.png")}
             />
           </View>
           <View style={styles.slide}>
             <Image
               style={styles.image}
-              source={require("../assets/welcome4.jpg")}
+              source={require("../assets/Onboarding4.png")}
             />
           </View>
           <View style={styles.slide}>
             <Image
               style={styles.image}
-              source={require("../assets/welcome5.jpg")}
+              source={require("../assets/Onboarding5.png")}
             />
           </View>
         </Carousel>
-        <Text style={styles.welcome_header}>Witaj!</Text>
+        <Text style={styles.welcome_header}>iCompose</Text>
         <Text style={styles.welcome_text}>
-          Dołącz do nas, aby zadbać razem o środowisko!
+          Twoja pomoc w efektywnym kompostowaniu!
         </Text>
       </View>
       <View
@@ -78,7 +78,7 @@ function WelcomeScreen({ navigation }) {
           <Text style={styles.button_text}>Let's Compost!</Text>
         </TouchableOpacity>
         <Text style={styles.agreement_text}>
-          Przechodząc dalej potwierdzasz, że zapoznałeś(aś) się z
+          Przechodząc dalej potwierdzasz, że zapoznałeś(aś) się z{" "}
           <Text
             style={{
               textDecorationLine: "underline",
@@ -107,9 +107,10 @@ const styles = StyleSheet.create({
     width: 375,
     alignSelf: "center",
     height: 330,
+    resizeMode: "contain",
   },
   button: {
-    backgroundColor: "#2BA84A",
+    backgroundColor: "#47E23B",
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 32,
@@ -119,7 +120,7 @@ const styles = StyleSheet.create({
   },
   welcome_text: {
     width: 280,
-    fontSize: 17,
+    fontSize: 18,
     color: "#9FA5C0",
     marginTop: 16,
     textAlign: "center",
@@ -140,14 +141,14 @@ const styles = StyleSheet.create({
     alignSelf: "center",
   },
   header_text: {
-    fontSize: 24,
-    color: "#3E5481",
+    fontSize: 28,
+    color: "#29462C",
     fontWeight: "bold",
     marginLeft: 12,
   },
   welcome_header: {
-    fontSize: 22,
-    color: "#2E3E5C",
+    fontSize: 32,
+    color: "#29462C",
     fontWeight: "bold",
     alignSelf: "center",
     marginTop: 24,

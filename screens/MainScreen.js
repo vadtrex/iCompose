@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useMemo, useCallback, useState } from "react";
 import {
   StyleSheet,
   Text,
@@ -12,8 +12,67 @@ import {
   Image,
 } from "react-native";
 import Carousel from "pinar";
+import BottomSheet from "@gorhom/bottom-sheet";
+import { handleSheetChanges } from "@gorhom/bottom-sheet";
+import {
+  LineChart,
+  BarChart,
+  PieChart,
+  ProgressChart,
+  ContributionGraph,
+  StackedBarChart,
+} from "react-native-chart-kit";
 
 function MainScreen({ navigation }) {
+  const [isChartShown, setisChartShown] = useState(false);
+
+  const chartConfig = {
+    backgroundGradientFrom: "#1E2923",
+    backgroundGradientFromOpacity: 0,
+    backgroundGradientTo: "#08130D",
+    backgroundGradientToOpacity: 0.5,
+    color: (opacity = 1) => `rgba(26, 255, 146, ${opacity})`,
+    strokeWidth: 2, // optional, default 3
+    barPercentage: 0.5,
+    useShadowColorFromDataset: false, // optional
+  };
+  const chartData = [
+    {
+      name: "Owoce",
+      percentage: 22,
+      color: "#E8BCBC",
+      legendFontColor: "#29462C",
+      legendFontSize: 14,
+    },
+    {
+      name: "Warzywa",
+      percentage: 25,
+      color: "#FFD076",
+      legendFontColor: "#29462C",
+      legendFontSize: 14,
+    },
+    {
+      name: "Trawiaste",
+      percentage: 41,
+      color: "#D6ECA3",
+      legendFontColor: "#29462C",
+      legendFontSize: 14,
+    },
+    {
+      name: "Inne",
+      percentage: 11,
+      color: "#C8CDFF",
+      legendFontColor: "#29462C",
+      legendFontSize: 14,
+    },
+    {
+      name: "Skorupki",
+      percentage: 1,
+      color: "#F2E8CF",
+      legendFontColor: "#29462C",
+      legendFontSize: 14,
+    },
+  ];
   const width = Dimensions.get("window").width;
   return (
     <ScrollView showsHorizontalScrollIndicator={false} style={styles.container}>
@@ -39,14 +98,33 @@ function MainScreen({ navigation }) {
       >
         Twój kompostownik:
       </Text>
+
       <TouchableOpacity
-        style={{ marginTop: 24, alignSelf: "center", width: 217 }}
+        style={{
+          marginLeft: 24,
+          marginTop: 24,
+          alignSelf: "center",
+        }}
+        onPress={() => setisChartShown(!isChartShown)}
       >
-        <Image
-          style={{ width: 340, height: 290, alignSelf: "center" }}
-          source={require("../assets/leaf1.png")}
-        />
+        {isChartShown ? (
+          <View>
+            <PieChart
+              data={chartData}
+              chartConfig={chartConfig}
+              width={width}
+              height={250}
+              accessor={"percentage"}
+            />
+          </View>
+        ) : (
+          <Image
+            style={{ width: 300, height: 250, alignSelf: "center" }}
+            source={require("../assets/leaf1.png")}
+          />
+        )}
       </TouchableOpacity>
+
       <View style={{ flexDirection: "row", alignSelf: "center" }}>
         <View
           style={{
@@ -91,7 +169,7 @@ function MainScreen({ navigation }) {
               alignSelf: "center",
             }}
           >
-            3,5
+            5,6
           </Text>
         </View>
         <View
